@@ -98,8 +98,6 @@ footer {
     text-decoration: none;
     font-size: 1.2rem;
     gap: 10px;
-    width: 32px;
-    height: 32px;
 }
 
 .github-link:hover {
@@ -108,6 +106,8 @@ footer {
 
 .github-icon {
     fill: white;
+    width: 32px;
+    height: 32px;
 }
 
 @media (max-width: 400px) {
