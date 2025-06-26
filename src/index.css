@@ -16,22 +16,23 @@ button {
 }
 
 #root {
-    background-color: #fef9f3;
-    border-radius: 10px;
-    display: block;
+    display: flex;
+    flex-direction: column;
     height: calc(100vh - 40px);
     margin: 0 auto;
     max-width: 500px;
-    min-width: 350px;
+    min-width: 250px;
 }
 
 main {
     align-items: center;
+    background-color: #fef9f3;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    flex-grow: 1;
     justify-content: space-evenly;
     padding: 10px 5%;
+    border-radius: 10px;
 }
 
 h1 {
@@ -43,18 +44,19 @@ p {
     font-size: 1.2rem;
     padding: 5%;
     text-align: center;
+    color: #000000af;
 }
 
 .dice-container {
     column-gap: 3%;
     display: flex;
     flex-wrap: wrap;
-    margin: 25px auto;
+    margin: 1.5rem auto;
     row-gap: 10px;
     width: 90%;
 }
 
-.dice-container > button {
+.dice-container button {
     aspect-ratio: 1/1;
     background-color: white;
     border: none;
@@ -68,13 +70,52 @@ p {
 .roll-btn {
     background-color: #5035ff;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     color: white;
     font-size: 1.75rem;
-    margin-bottom: 60px;
-    padding: 10px 25px;
+    margin: 25px 0 50px 0;
+    padding: 0.65rem 1.5rem;
 }
 
 button.is-held {
     background-color: greenyellow;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #0b2434;
+    color: white;
+    width: 100%;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    gap: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+.github-icon {
+    fill: white;
+}
+
+@media (max-width: 400px) {
+    .dice-container button {
+        font-size: 1.2rem;
+    }
+
+    .roll-btn {
+        font-size: 1.5rem;
+    }
 }
